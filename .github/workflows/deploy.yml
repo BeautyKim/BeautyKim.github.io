@@ -25,9 +25,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-          user_name: BeautyKim # GitHub 사용자 이름
-          user_email: kima2012114@gmail.com # GitHub 사용자 이메일
+          branch: gh-pages
+          folder: out
